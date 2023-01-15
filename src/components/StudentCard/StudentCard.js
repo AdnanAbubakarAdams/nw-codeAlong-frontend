@@ -1,3 +1,5 @@
+import "./StudentCard.css"
+
 const StudentCard = ({ student }) => {
     const { email, company, firstName, lastName, pic, grades, id, skill } =
       student;
@@ -18,8 +20,11 @@ const StudentCard = ({ student }) => {
   
     console.log(`<StudentCard /> rendered name=${firstName}`);
     return (
-      <div key={id}>
+      <div className="StudentCard" key={id}>
+        <div className="StudentCard__avatar">
         <img src={pic} alt={`${firstName} ${lastName}`} />
+        </div>
+        <div className="StudentCard__info">
         <h1>
           {firstName} {lastName}
         </h1>
@@ -29,6 +34,7 @@ const StudentCard = ({ student }) => {
           <li>Skill: {skill}</li>
           <li>Average: {average}%</li>
         </ul>
+        </div>
       </div>
     );
   };

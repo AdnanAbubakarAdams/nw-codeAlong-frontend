@@ -1,0 +1,9 @@
+.StudentCardList {
+    width: 60vw;
+    height: 80vh;
+    overflow-y: scroll;
+    /* border: 3px dotted blue; */
+    background-color: aliceblue;
+    border-radius: 7px;
+}
+
